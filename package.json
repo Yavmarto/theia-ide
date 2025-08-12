@@ -59,6 +59,12 @@
     "license:check:review": "npx dash-licenses-wrapper  --configFile=./configs/license-check-config.json --review",
     "postinstall": "theia-patch"
   },
+  "theiaExtensions": [
+    {
+      "backend": "lib/node/code-chief-server-backend-module",
+      "frontend": "lib/node/code-chief-server-frontend-module"
+    }
+  ],
   "theiaPluginsDir": "plugins",
   "theiaPlugins": {
     "eclipse-theia.builtin-extension-pack": "https://open-vsx.org/api/eclipse-theia/builtin-extension-pack/1.95.3/file/eclipse-theia.builtin-extension-pack-1.95.3.vsix",
@@ -74,6 +80,7 @@
     "vscode.microsoft-authentication"
   ],
   "workspaces": [
+    "code-chief-server",
     "applications/*",
     "theia-extensions/*"
   ],
